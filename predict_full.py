@@ -112,7 +112,7 @@ if __name__ == "__main__":
     net = UNet(n_channels=3, n_classes=1)
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     net.to(device=device)
-    net.load_state_dict(torch.load('./checkpoints/CP_epoch7.pth', map_location=device))
+    net.load_state_dict(torch.load('./checkpoints/CP_full.pth', map_location=device))
 
     root_dir_image = './_raw_data/val/images/'
     root_dir_label = './_raw_data/val/labels_binary/'
